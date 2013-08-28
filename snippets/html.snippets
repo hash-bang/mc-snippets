@@ -1,0 +1,171 @@
+snippet alert
+	<div class="alert">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		${1:Alert Message}
+
+snippet alerterror
+	<div class="alert alert-error">
+		${1:Alert Message}
+	</div>
+
+
+snippet alertinfo
+	<div class="alert alert-info">
+		${1:Alert Message}
+	</div>
+
+
+snippet alertsuccess
+	<div class="alert alert-success">
+		${1:Alert Message}
+	</div>
+
+snippet badge
+	<span class="badge">${1:1}</span>
+
+snippet badgeimportant
+	<span class="badge badge-important">${1:Text}</span>
+
+snippet badgeinfo
+	<span class="badge badge-info">${1:Text}</span>
+
+snippet badgeinverse
+	<span class="badge badge-inverse">${1:Text}</span>
+
+snippet badgesuccess
+	<span class="badge badge-success">${1:Text}</span>
+
+snippet badgewarning
+	<span class="badge badge-warning">${1:Text}</span>
+
+snippet breadcrumb
+	<ul class="breadcrumb">
+		<li><a href="${1:#}"><i class="icon-home"></i></a> <span class="divider">/</span></li>
+		<li><a href="${2:#}">${3:Foo}</a> <span class="divider">/</span></li>
+		<li class="active">${4:Bar}</li>
+	</ul>
+
+snippet btn
+	<a class="btn">${1:Button Text}</a>
+
+snippet btngroup
+	<div class="btn-group">
+		<a class="btn">${1:Text 1}</a>
+		<a class="btn">${2:Text 2}</a>
+		<a class="btn">${3:Text 3}</a>
+	</div>
+
+snippet btninfo
+	<a class="btn btn-info">${1:Button Text}</a>
+
+snippet btnprimary
+	<a class="btn btn-primary">${1:Button Text}</a>
+
+snippet btnsuccess
+	<a class="btn btn-success">${1:Button Text}</a>
+
+snippet btnwarning
+	<a class="btn btn-warning">${1:Button Text}</a>
+
+snippet containerfluid
+	<div class="container-fluid">
+		${1:...}
+	</div>
+
+snippet dropdown
+	<div class="dropdown">
+		<a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-leaf"></i> <span class="caret"></span></a>
+		<ul class="dropdown-menu">
+			<li><a href="#"><i class="icon-edit"></i> ${1:Edit}</a></li>
+			<li class="divider"></li>
+			<li><a href="#"><i class="icon-trash"></i> ${2:Delete}</a></li>
+		</ul>
+	</div>
+
+snippet form
+	<form action="${1:?}" class="form-horizontal">
+		<div class="control-group">
+			<label class="control-label">Email</label>
+			<div class="controls">
+				<input type="text" placeholder="Email">
+			</div>
+		</div>
+	</form>
+
+snippet field
+	<div class="control-group">
+		<label class="control-label">${1:Label}</label>
+		<div class="controls">
+			${2:Input}
+		</div>
+	</div>
+
+snippet icon
+	<i class="icon-${1:leaf}"></i>
+
+snippet i
+	<i class="icon-${1:leaf}"></i>
+
+snippet inputappend
+	<div class="input-append">
+		<input class="span2" type="text">
+		<span class="add-on">${1:.00}</span>
+	</div>
+
+snippet inputprepend
+	<div class="input-prepend">
+		<span class="add-on">${1:@}</span>
+		<input class="span2" id="prependedInput" type="text" placeholder="${2:Username}">
+	</div>
+
+snippet label
+	<span class="label">${1:Text}</span>
+
+snippet labelimportant
+	<span class="label label-important">${1:Important}</span>
+
+snippet labelinfo
+	<span class="label label-info">${1:Info}</span>
+
+snippet labelinverse
+	<span class="label label-inverse">${1:Inverse}</span>
+
+snippet labelsuccess
+	<span class="label label-success">${1:Success}</span>
+
+snippet labelwarning
+	<span class="label label-warning">${1:Warning}</span>
+
+snippet modal
+	<div id="${1:ID}" class="modal hide fade">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h3>${2:Modal header}</h3>
+		</div>
+		<div class="modal-body">
+			<p>${3:Modal Body}</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
+		</div>
+	</div>
+
+snippet progress
+	<div class="progress progress-striped active">
+		<div class="bar" style="width: ${1:40}%;"></div>
+	</div>
+
+snippet row
+	<div class="row">
+		${1:...}
+	</div>
+
+snippet rowfluid
+	<div class="row-fluid">
+		${1:...}
+	</div>
+
+snippet table
+	<table class="table table-striped table-bordered">
+		${1:...}
+	</table>
