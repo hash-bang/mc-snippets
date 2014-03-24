@@ -1,5 +1,5 @@
 snippet alert
-<div class="alert">
+<div class="alert alert-default">
 	<button type="button" class="close" data-dismiss="alert">&times;</button>
 	${1:Alert Message}
 
@@ -22,19 +22,15 @@ snippet alertsuccess
 endsnippet
 
 snippet badge
-<span class="badge">${1:1}</span>
+<span class="badge badge-default">${1:1}</span>
 endsnippet
 
-snippet badgeimportant
-<span class="badge badge-important">${1:Text}</span>
+snippet badgedanger
+<span class="badge badge-danger">${1:Text}</span>
 endsnippet
 
 snippet badgeinfo
 <span class="badge badge-info">${1:Text}</span>
-endsnippet
-
-snippet badgeinverse
-<span class="badge badge-inverse">${1:Text}</span>
 endsnippet
 
 snippet badgesuccess
@@ -54,25 +50,25 @@ snippet breadcrumb
 endsnippet
 
 snippet btn
-<a class="btn">${1:Button Text}</a>
+<a class="btn btn-default">${1:Button Text}</a>
 endsnippet
 
 snippet btndropdown
 <div class="btn-group">
-	<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> ${1:Button Text} <span class="caret"></span></a>
+	<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#"> ${1:Button Text} <span class="caret"></span></a>
 	<ul class="dropdown-menu">
-		<li><a href="#"><i class="icon-edit"></i> ${2:Edit}</a></li>
+		<li><a href="#">${2:Edit}</a></li>
 		<li class="divider"></li>
-		<li><a href="#"><i class="icon-trash"></i> ${3:Delete}</a></li>
+		<li><a href="#">${3:Delete}</a></li>
 	</ul>
 </div>
 endsnippet
 
 snippet btngroup
 <div class="btn-group">
-	<a class="btn">${1:Text 1}</a>
-	<a class="btn">${2:Text 2}</a>
-	<a class="btn">${3:Text 3}</a>
+	<a class="btn btn-default">${1:Text 1}</a>
+	<a class="btn btn-default">${2:Text 2}</a>
+	<a class="btn btn-default">${3:Text 3}</a>
 </div>
 endsnippet
 
@@ -92,38 +88,23 @@ snippet btnwarning
 <a class="btn btn-warning">${1:Button Text}</a>
 endsnippet
 
-snippet containerfluid
-<div class="container-fluid">
-	${1:...}
-</div>
-endsnippet
-
-snippet control
-<div class="control-group">
-	<label class="control-label">${1:Email}</label>
-	<div class="controls">
-		<input type="text">
-	</div>
-</div>
-endsnippet
-
 snippet dropdown
-<div class="dropdown">
-	<a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-leaf"></i> <span class="caret"></span></a>
+<div class="btn-group">
+	<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#"> ${1:Button Text} <span class="caret"></span></a>
 	<ul class="dropdown-menu">
-		<li><a href="#"><i class="icon-edit"></i> ${1:Edit}</a></li>
+		<li><a href="#">${2:Edit}</a></li>
 		<li class="divider"></li>
-		<li><a href="#"><i class="icon-trash"></i> ${2:Delete}</a></li>
+		<li><a href="#">${3:Delete}</a></li>
 	</ul>
 </div>
 endsnippet
 
 snippet form
 <form action="${1:?}" class="form-horizontal">
-	<div class="control-group">
-		<label class="control-label">Email</label>
-		<div class="controls">
-			<input type="text" placeholder="Email">
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Email</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" placeholder="Email">
 		</div>
 	</div>
 </form>
@@ -139,33 +120,33 @@ snippet form-group
 endsnippet
 
 snippet field
-<div class="control-group">
-	<label class="control-label">${1:Label}</label>
-	<div class="controls">
-		${2:Input}
+<div class="form-group">
+	<label class="col-sm-2 control-label">${1:Email}</label>
+	<div class="col-sm-10">
+		<input type="text" class="form-control" name="${2:email}"/>
 	</div>
 </div>
 endsnippet
 
 snippet icon
-<i class="icon-${1:leaf}"></i>
+<i class="fa fa-${1:leaf}"></i>
 endsnippet
 
 snippet i
-<i class="icon-${1:leaf}"></i>
+<i class="fa fa-${1:leaf}"></i>
 endsnippet
 
 snippet inputappend
-<div class="input-append">
-	<input class="span2" type="text">
-	<span class="add-on">${1:.00}</span>
+<div class="input-group">
+	<input class="form-control" type="text">
+	<span class="input-group-addon">${1:.00}</span>
 </div>
 endsnippet
 
 snippet inputprepend
-<div class="input-prepend">
-	<span class="add-on">${1:@}</span>
-	<input class="span2" id="prependedInput" type="text" placeholder="${2:Username}">
+<div class="input-group">
+	<span class="input-group-addon">${1:@}</span>
+	<input class="form-control" id="prependedInput" type="text" placeholder="${2:Username}">
 </div>
 endsnippet
 
@@ -173,16 +154,12 @@ snippet label
 <span class="label">${1:Text}</span>
 endsnippet
 
-snippet labelimportant
-<span class="label label-important">${1:Important}</span>
+snippet labeldanger
+<span class="label label-danger">${1:Danger}</span>
 endsnippet
 
 snippet labelinfo
 <span class="label label-info">${1:Info}</span>
-endsnippet
-
-snippet labelinverse
-<span class="label label-inverse">${1:Inverse}</span>
 endsnippet
 
 snippet labelsuccess
@@ -210,7 +187,7 @@ endsnippet
 
 snippet progress
 <div class="progress progress-striped active">
-	<div class="bar" style="width: ${1:40}%;"></div>
+	<div class="progress-bar" style="width: ${1:40}%;"></div>
 </div>
 endsnippet
 
@@ -246,7 +223,7 @@ endsnippet
 
 snippet tabs
 <ul class="nav nav-tabs" id="myTab">
-	<li class="active"><a href="#home">Home</a></li>
+	<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
 </ul>
 <div class="tab-content">
 	<div class="tab-pane active" id="home">...</div>
