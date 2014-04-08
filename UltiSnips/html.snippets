@@ -1,3 +1,4 @@
+# Page layouts {{{
 snippet html:bs
 <!DOCTYPE html>
 <html lang="en">
@@ -31,11 +32,42 @@ snippet html:bs
 </body>
 </html>
 endsnippet
+# }}}
 
+# Angular {{{
+snippet ng-controller
+<script>
+app.controller('dashCtrl', function($scope) {
+	${1}
+});
+</script>
+endsnippet
+
+snippet ng-rest
+<script>
+app.factory('${1:Device}', function($resource){
+	return $resource('/${2:device}s/:$2id', {}, {
+		meta: {url: '/$2s/meta'}
+	});
+});
+</script>
+endsnippet
+
+snippet ng-select-array
+<select ng-model="${1:user}id" ng-options="$1.$1id as $1.name for $1 in $1s"></select>
+endsnippet
+
+snippet ng-select-hash
+<select ng-model="${1:types}" ng-options="k as v for (k,v) in $1"></select>
+endsnippet
+# }}}
+
+# Bootstrap {{{
 snippet alert
 <div class="alert alert-default">
 	<button type="button" class="close" data-dismiss="alert">&times;</button>
 	${1:Alert Message}
+</div>
 endsnippet
 
 snippet alerterror
@@ -134,17 +166,22 @@ snippet dropdown
 </div>
 endsnippet
 
-snippet fa
-<i class="fa fa-${1:leaf}"></i>
-endsnippet
-
 snippet form
 <form action="${1:?}" class="form-horizontal">
 	<div class="form-group">
 		<label class="col-sm-2 control-label">Email</label>
 		<div class="col-sm-10">
-			<input type="text" class="form-control" placeholder="Email">
+			<input type="text" class="form-control" placeholder="Email"/>
 		</div>
+	</div>
+</form>
+endsnippet
+
+snippet form-inline
+<form action="${1:?}" class="form-inline">
+	<div class="form-group">
+		<label class="control-label">Email</label>
+		<input type="text" class="form-control" placeholder="Email"/>
 	</div>
 </form>
 endsnippet
@@ -154,6 +191,17 @@ snippet form-group
 	<label class="col-sm-2 control-label">${1:Email}</label>
 	<div class="col-sm-10">
 		<input type="text" class="form-control" name="${2:email}"/>
+	</div>
+</div>
+endsnippet
+
+snippet form-group-select
+<div class="form-group">
+	<label class="col-sm-2 control-label">${1:Email}</label>
+	<div class="col-sm-10">
+		<select name="${2:select_name}" class="form-control">
+			<option value="${3:opt1}">${4:Option 1}</option>
+		</select>
 	</div>
 </div>
 endsnippet
@@ -224,24 +272,6 @@ snippet modal
 </div>
 endsnippet
 
-snippet progress
-<div class="progress progress-striped active">
-	<div class="progress-bar" style="width: ${1:40}%;"></div>
-</div>
-endsnippet
-
-snippet pull-center
-<div class="pull-center">
-	${1:...}
-</div>
-endsnippet
-
-snippet pullcenter
-<div class="pull-center">
-	${1:...}
-</div>
-endsnippet
-
 snippet pull-right
 <div class="pull-right">
 	${1:...}
@@ -251,6 +281,12 @@ endsnippet
 snippet pullright
 <div class="pull-right">
 	${1:...}
+</div>
+endsnippet
+
+snippet progress
+<div class="progress progress-striped active">
+	<div class="progress-bar" style="width: ${1:40}%;"></div>
 </div>
 endsnippet
 
@@ -280,3 +316,24 @@ snippet tabs
 	<div class="tab-pane active" id="home">...</div>
 </div>
 endsnippet
+# }}}
+
+# FontAwesome {{{
+snippet fa
+<i class="fa fa-${1:leaf}"></i>
+endsnippet
+# }}}
+
+# Shoelace {{{
+snippet pull-center
+<div class="pull-center">
+	${1}
+</div>
+endsnippet
+
+snippet pullcenter
+<div class="pull-center">
+	${1}
+</div>
+endsnippet
+# }}}
